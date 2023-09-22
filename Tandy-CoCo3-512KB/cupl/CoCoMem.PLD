@@ -1,0 +1,77 @@
+Name      CoCoMem;
+Partno    V1;
+Date      9/22/2023;
+Rev       01;
+Designer  Evie Salomon;
+Company   BackBit;
+Assembly  None;
+Location  None;
+Device    f1502isptqfp44;
+PROPERTY ATMEL {pin_keep OFF} ; /* Disables pin-keeper circuits */
+PROPERTY ATMEL {preassign = keep};
+
+PIN 2 = out_a0;
+PIN 3 = out_a1;
+PIN 5 = out_a2;
+PIN 6 = out_a3;
+PIN 8 = out_a6;
+PIN 10 = out_a5;
+PIN 11 = out_a4;
+PIN 12 = in_z0;
+PIN 13 = in_z1;
+PIN 14 = in_z2;
+PIN 15 = in_z3;
+PIN 18 = in_z6;
+PIN 19 = in_z5;
+PIN 20 = in_z4;
+PIN 21 = in_z7;
+PIN 22 = in_z8;
+PIN 23 = in_we0;
+PIN 25 = in_we1;
+PIN 27 = out_a7;
+PIN 28 = out_a8;
+PIN 30 = out_we;
+PIN 31 = in_rc;
+PIN 33 = out_rc;
+PIN 34 = out_ce;
+PIN 37 = in_ras;
+PIN 40 = in_cas;
+PIN 42 = out_oe;
+PIN 43 = out_ub;
+PIN 44 = out_lb;
+
+out_a0.d = in_z0;
+out_a0.ck = !in_ras;
+
+out_a1.d = in_z1;
+out_a1.ck = !in_ras;
+
+out_a2.d = in_z2;
+out_a2.ck = !in_ras;
+
+out_a3.d = in_z3;
+out_a3.ck = !in_ras;
+
+out_a4.d = in_z4;
+out_a4.ck = !in_ras;
+
+out_a5.d = in_z5;
+out_a5.ck = !in_ras;
+
+out_a6.d = in_z6;
+out_a6.ck = !in_ras;
+
+out_a7.d = in_z7;
+out_a7.ck = !in_ras;
+
+out_a8.d = in_z8;
+out_a8.ck = !in_ras;
+
+enable_write = !(in_we0 & in_we1 # in_cas);
+
+out_we = !(enable_write & !in_rc);
+out_rc = enable_write;
+out_ce = in_ras;
+out_oe = in_cas;
+out_ub = !in_we0;
+out_lb = !in_we1;

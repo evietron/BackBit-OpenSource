@@ -1,0 +1,41 @@
+Name      TI32K;
+Partno    V1;
+Date      9/22/2023;
+Rev       01;
+Designer  Evie Salomon;
+Company   BackBit;
+Assembly  None;
+Location  None;
+Device    f1502isptqfp44;
+PROPERTY ATMEL {preassign = keep};
+
+PIN 2 = ram_cs;
+PIN 3 = ram_oe;
+PIN 5 = ram_a2;
+PIN 6 = ram_we;
+PIN 22 = we;
+PIN 23 = dbin;
+PIN 25 = memen;
+PIN 27 = a0;
+PIN 28 = a1;
+PIN 30 = a2;
+PIN 37 = phi3;
+
+PIN [18..21,14,15,13,12] = [D0..7];
+PIN [44..42,35,34,11,10,8] = [Q0..7];
+
+PINNODE = bus_active;
+
+bus_active = !memen & ((!a0 & !a1 & a2) # (a0 & (a1 # a2)));
+ram_cs = !bus_active;
+ram_oe = !bus_active;
+ram_a2 = a0 & a2;
+ram_we = we;
+
+[D0..7].d = [Q0..7];
+[D0..7].oe = bus_active & dbin;
+[D0..7].ck = phi3;
+
+[Q0..7].d = [D0..7];
+[Q0..7].oe = bus_active & !dbin;
+[Q0..7].ck = phi3;
