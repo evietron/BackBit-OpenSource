@@ -19,7 +19,7 @@ These are some memory expansions that I use for my own machines. I used to sell 
 ![tandy](https://github.com/evietron/BackBit-MemoryExpansion/assets/35610816/564bc779-8421-4ecd-83f1-d87a8843ee1d)
 - Details: Expands base model's 128KB to 512KB. Timing window is very narrow. RC delay accomodates SRAM to work in place of DRAM.
 - BOM: 1x SMT IS61C25616AS-25TLI, 1x SMT ATF1502ASL-25AU44, square header pins.
-- Installation: Program CPLD w/ ATDH1150USB programmer. Remove existing RAM chips, drop into expansion headers. Optionally remove ceramic caps C65 and C66.
+- Installation: Program CPLD w/ ATDH1150USB programmer. Remove existing RAM chips, plug memory board into expansion headers. Optionally remove ceramic caps C65 and C66.
 
 ## Texas Instruments TI-99/4A (32KB sidecar expansion)
 ![ti99](https://github.com/evietron/BackBit-MemoryExpansion/assets/35610816/79d055d7-3faf-4f9b-b9ff-c5828c904c9f)
