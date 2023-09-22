@@ -1,6 +1,6 @@
 # BackBit-MemoryExpansion
 
-These are some memory expansions that I use for my own machines. Designs may have been derived from various information I scrubbed from the internet, but layouts are my own. Feel free to make your own builds, modifications, or to ask me questions about how to build.
+These are some memory expansions that I use for my own machines. I used to sell some of these, but I no longer have the bandwidth to build memory expansions so I have made the designs open-source. Designs may have been derived from various information I scrubbed from the internet, but layouts are my own. Feel free to make your own builds, modifications, or to ask me questions about how to build.
 
 ## Atari-520ST-4MB
 
