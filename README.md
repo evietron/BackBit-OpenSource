@@ -18,10 +18,10 @@ These are some memory expansions that I use for my own machines. I used to sell 
 ![tandy](https://github.com/evietron/BackBit-MemoryExpansion/assets/35610816/564bc779-8421-4ecd-83f1-d87a8843ee1d)
 - Details: Expands base model's 128KB to 512KB. Timing window is very narrow. RC delay accomodates SRAM to work in place of DRAM.
 - BOM: 1x SMT IS61C25616AS-25TLI, 1x SMT ATF1502ASL-25AU44, square header pins.
-- Installation: Program CPLD w/ ATDH1150USB programmer. Remove existing RAM chips, attach square pin headers, drop into expansion headers. Optionally remove ceramic caps C65 and C66.
+- Installation: Program CPLD w/ ATDH1150USB programmer. Remove existing RAM chips, drop into expansion headers. Optionally remove ceramic caps C65 and C66.
 
 ## TexasInstruments-TI994A-32KB
 ![ti99](https://github.com/evietron/BackBit-MemoryExpansion/assets/35610816/79d055d7-3faf-4f9b-b9ff-c5828c904c9f)
 - Details: Fills in the system's memory map to get the maximum non-bankswitched RAM expansion. No pass-through port in this design. Need to add JTAG header if you don't have a programmer with a socket.
 - BOM: 1x SMT CY62256NLL-70, 1x SMT ATF1502ASL-25AU44, 5x SMT 0.1uF bypass capacitors, 44P 2.54mm edge connector.
-- Installation: Program CPLD w/ ATDH1150USB programmer. Attach edge connector.
+- Installation: Program CPLD w/ ATDH1150USB programmer. Plug into side of machine.
