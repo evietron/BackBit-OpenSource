@@ -26,3 +26,4 @@ These are some memory expansions that I use for my own machines. I used to sell 
 - Details: Fills in the system's memory map to get the maximum non-bankswitched RAM expansion. No pass-through port in this design. Need to add JTAG header if you don't have a programmer with a socket.
 - BOM: 1x SMT CY62256NLL-70, 1x SMT ATF1502ASL-25AU44, 5x SMT 0.1uF bypass capacitors, 44P 2.54mm edge connector.
 - Installation: Program CPLD w/ ATDH1150USB programmer. Plug sidecar into side of machine.
+- Case: https://www.printables.com/model/301498
