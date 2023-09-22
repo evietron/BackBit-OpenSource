@@ -7,13 +7,13 @@ These are some memory expansions that I use for my own machines. I used to sell 
 ![atari](https://github.com/evietron/BackBit-MemoryExpansion/assets/35610816/f5d18e29-09bc-4446-92b1-2fdf34975245)
 - Details: Expands 520ST or 1040ST to maxmimum 4MB RAM.
 - BOM: 2x SMT MSM5118165F-50TK, 2x SMT 0.1uF ceramic capacitors, 1x 33Ω THT resistor, 2x 66Ω THT resistor, round header pins, 16x 16P 0.3" sockets, 4x bodge wires.
-- Installation: Mount sockets on main board, route bodge wires, drop memory board into sockets.
+- Installation: Mount sockets on main board, route bodge wires. Plug memory board into sockets.
 
 ## IBM PCjr (512KB sidecar expansion)
 ![pcjr](https://github.com/evietron/BackBit-MemoryExpansion/assets/35610816/a76c975b-dd6d-4008-a9ed-c999b2c15e44)
 - Details: Adds 512KB, expanding total system memory to 640KB (if you already have 128KB internally).
 - BOM: 1x THT AS6C4008-55PCN/PIN, 2x THT 0.1uF ceramic capacitors, 1x THT 10uF electrolytic capacitor, 1x THT 74LS151 logic chip, 2x30P 2.54mm female header.
-- Installation: Plug into side of machine.
+- Installation: Plug sidecar into side of machine.
 
 ## Tandy Color Computer 3 (512KB internal upgrade)
 ![tandy](https://github.com/evietron/BackBit-MemoryExpansion/assets/35610816/564bc779-8421-4ecd-83f1-d87a8843ee1d)
@@ -25,4 +25,4 @@ These are some memory expansions that I use for my own machines. I used to sell 
 ![ti99](https://github.com/evietron/BackBit-MemoryExpansion/assets/35610816/79d055d7-3faf-4f9b-b9ff-c5828c904c9f)
 - Details: Fills in the system's memory map to get the maximum non-bankswitched RAM expansion. No pass-through port in this design. Need to add JTAG header if you don't have a programmer with a socket.
 - BOM: 1x SMT CY62256NLL-70, 1x SMT ATF1502ASL-25AU44, 5x SMT 0.1uF bypass capacitors, 44P 2.54mm edge connector.
-- Installation: Program CPLD w/ ATDH1150USB programmer. Plug into side of machine.
+- Installation: Program CPLD w/ ATDH1150USB programmer. Plug sidecar into side of machine.
