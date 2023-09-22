@@ -5,7 +5,7 @@ These are some memory expansions that I use for my own machines. Feel free to ma
 ## Atari-520ST-4MB
 
 - Details: Expands 520ST or 1040ST to maxmimum 4MB RAM.
-- BOM: 2x SMT MSM5118165F-50TK, 1x SMT 0.1uF ceramic capacitors, 1x 33Ω THT resistor, 2x 66Ω THT resistor, round header pins, 16x 16P 0.3" sockets, 4x bodge wires.
+- BOM: 2x SMT MSM5118165F-50TK, 2x SMT 0.1uF ceramic capacitors, 1x 33Ω THT resistor, 2x 66Ω THT resistor, round header pins, 16x 16P 0.3" sockets, 4x bodge wires.
 - Installation: Mount sockets on main board, route bodge wires, drop memory board into sockets.
 
 ## IBM-PCjr-512KB
