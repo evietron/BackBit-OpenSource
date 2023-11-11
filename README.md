@@ -10,8 +10,7 @@ These are some hardware devices that I use for my vintage machines. I used to se
 - Installation: Mount sockets on main board, route bodge wires. Plug memory board into sockets.
 
 ## Commodore 64/128 Diagnostic Harness: Keyboard Loopback for 128/128D/SX64
-![c128d](https://github.com/evietron/BackBit-OpenSource/assets/35610816/9d73f9a1-f4bf-43c7-9589-ed42add57649)
-![sx64](https://github.com/evietron/BackBit-OpenSource/assets/35610816/7f00defd-ea8d-4209-9b4a-770ed99493be)
+![dongle](https://github.com/evietron/BackBit-OpenSource/assets/35610816/0ff5ee9e-ce08-46f5-bf3d-5d8ec9489b38)
 - Details: Provides a keyboard loopback for C128, C128D, and SX64 machines to peform full diagnostic tests
 - Note: there are two ways to build --- a reversible C128/C128D loopback, and a SX64 loopback.
 - BOM (128/128D): DB25 - male & female connectors (with screws removed), 1x #6x1/2" brass screw, E-Switch LC2259EENP DPDT switch, E-Switch 1SBLK switch cap
