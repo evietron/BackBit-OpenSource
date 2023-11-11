@@ -16,7 +16,7 @@ These are some hardware devices that I use for my vintage machines. I used to se
 - BOM (128/128D): DB25 - male & female connectors (with screws removed), 1x #6x1/2" brass screw, E-Switch LC2259EENP DPDT switch, E-Switch 1SBLK switch cap
 - BOM (SX64): DB25 - male connector with cover removed
 - Instructions (128/128D): Print Keyboard128 case. Solder DB25 male connector to "DB25-M(8)" side and DB25 female connector to "DB25-M(X)/F(8)" side. Solder DPDT switch. 
-- Instructions (SX64): Print KeyboardSX case. Solder "SX64 enable" blob. Solder DB25 male connector (w/ cover removed) to "DB25-M(X)/F(8)" side.
+- Instructions (SX64): Print KeyboardSX case. Solder "SX64 enable" blob. Solder DB25 male connector (w/ cover removed) to "DB25-M(X)/F(8)" side. Attach to case with super glue, direction as shown in the picture.
  
 ## IBM PCjr (512KB sidecar expansion)
 ![pcjr](https://github.com/evietron/BackBit-OpenSource/assets/35610816/a76c975b-dd6d-4008-a9ed-c999b2c15e44)
