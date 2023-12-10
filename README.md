@@ -30,7 +30,7 @@ These are some hardware devices that I use for my vintage machines. I used to se
 - Compatibility Mode: Switch allows cartridges to work in FAST mode.
 - KERNAL Mode: Switch allows BackBit cartridge (any maybe others) to replace KERNAL ROM.
 - Private Eyes Mode: Switch sets bug high to facilitate in-circuit testing.
-- BOM: XC9572XL-*VQG64C, 3x 2.54mm DIP switch, 48x header pins, optional 48P socket.
+- BOM: XC9572XL-*VQG64C, 3x 2.54mm DIP switch, 48x header pins, optional 48P socket, and parts assembled on bottom of PCB listed in parts folder.
 - Instructions: PCB requires SMT assembly.
 
 ## Tandy Color Computer 3 (512KB internal upgrade)
