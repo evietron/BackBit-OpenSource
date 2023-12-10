@@ -32,6 +32,7 @@ These are some hardware devices that I use for my vintage machines. I used to se
 - Private Eyes Mode: Switch sets bus high to facilitate in-circuit testing.
 - BOM: XC9572XL-*VQG64C, 3x 2.54mm DIP switch, 48x header pins, optional 48P socket, and parts assembled on bottom of PCB listed in parts folder.
 - Instructions: PCB requires SMT assembly.
+- Note: There is very limited height inside the C128 and you may want to modify this design to use Flip Pins (http://oshchip.org/products/Flip-Pins_Product)
 
 ## Tandy Color Computer 3 (512KB internal upgrade)
 ![tandy](https://github.com/evietron/BackBit-OpenSource/assets/35610816/564bc779-8421-4ecd-83f1-d87a8843ee1d)
