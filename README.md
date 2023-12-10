@@ -24,6 +24,15 @@ These are some hardware devices that I use for my vintage machines. I used to se
 - BOM: 1x THT AS6C4008-55PCN/PIN, 2x THT 0.1uF ceramic capacitors, 1x THT 10uF electrolytic capacitor, 1x THT 74LS151 logic chip, 2x30P 2.54mm female header.
 - Installation: Plug sidecar into side of machine.
 
+## PLAster 128 (PLA replacement for Commodore 128)
+![plaster128](https://github.com/evietron/BackBit-OpenSource/assets/35610816/7ebf0da7-4511-4e17-847f-dc302badc5b8)
+- Details: Replaces MOS 8721 with exact equations used in original device
+- Compatibility Mode: Switch allows cartridges to work in FAST mode.
+- KERNAL Mode: Switch allows BackBit cartridge (any maybe others) to replace KERNAL ROM.
+- Private Eyes Mode: Switch sets bug high to facilitate in-circuit testing.
+- BOM: XC9572XL-*VQG64C, 3x 2.54mm DIP switch, 48x header pins, optional 48P socket.
+- Instructions: PCB requires SMT assembly.
+
 ## Tandy Color Computer 3 (512KB internal upgrade)
 ![tandy](https://github.com/evietron/BackBit-OpenSource/assets/35610816/564bc779-8421-4ecd-83f1-d87a8843ee1d)
 - Details: Expands base model's 128KB to 512KB. Timing window is very narrow. RC delay accomodates SRAM to work in place of DRAM.
