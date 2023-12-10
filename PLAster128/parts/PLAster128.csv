@@ -1,0 +1,8 @@
+Comment,Designator,Footprint,LCSC
+"100nF","C1,C2,C3,C4","Capacitor_SMD:C_0402_1005Metric","C1525"
+"1uF","C5,C6","Capacitor_SMD:C_0805_2012Metric","C28323"
+"1N4148WS","D1,D2,D3,D4,D5,D6,D7,D8,D9,D10,D11,D12,D13,D14,D15,D16,D17,D18","Diode_SMD:D_SOD-323","C2128"
+"Ferrite_Bead_Small","FB1","Capacitor_SMD:C_0805_2012Metric","C1015"
+"10K","R1,R2,R3","Resistor_SMD:R_0402_1005Metric","C25744"
+"3.3K","R4,R5,R6,R7,R8,R9,R10,R11,R12,R13,R14,R15,R16,R17,R18,R19,R20,R21","Resistor_SMD:R_0402_1005Metric","C25890"
+"XC6206","U1","Package_TO_SOT_SMD:SOT-23","C5446"
