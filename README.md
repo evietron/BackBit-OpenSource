@@ -25,6 +25,7 @@ These are some hardware devices that I use for my vintage machines. I used to se
 - Installation: Plug sidecar into side of machine.
 
 ## Korg 01/W LCD Fix
+![korg](https://github.com/evietron/BackBit-OpenSource/assets/35610816/7c0aca98-5733-446d-937b-ad7a9d408a7a)
 - Details: Adapter to fix the contrast when replacing the Korg 01/W LCD with a modern LED replacement
 
 ## PLAster 128 (PLA replacement for Commodore 128)
