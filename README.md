@@ -4,7 +4,7 @@
 These are some hardware devices that I use for my vintage machines. I used to sell some of these, but I no longer have the bandwidth to build these specfic items so I have made the designs open-source. Designs may have been derived from various information I scrubbed from the internet, but layouts are my own. Feel free to make your own builds, modifications, or to ask me questions about how to build.
 
 ## Atari 520ST/1040ST (4MB internal upgrade)
-![atari](https://github.com/evietron/BackBit-OpenSource/assets/35610816/f5d18e29-09bc-4446-92b1-2fdf34975245)
+[![atari](https://github.com/evietron/BackBit-OpenSource/assets/35610816/f5d18e29-09bc-4446-92b1-2fdf34975245)](https://github.com/evietron/BackBit-OpenSource/tree/main/Atari-520ST-4MB)
 - Details: Expands 520ST or 1040ST to maxmimum 4MB RAM.
 - BOM: 2x SMT MSM5118165F-50TK, 2x SMT 0.1uF ceramic capacitors, 1x 33Ω THT resistor, 2x 66Ω THT resistor, round header pins, 16x 16P 0.3" sockets, 4x bodge wires.
 - Installation: Mount sockets on main board, route bodge wires. Plug memory board into sockets.
