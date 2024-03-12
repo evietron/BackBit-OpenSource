@@ -17,7 +17,12 @@ These are some hardware devices that I use for my vintage machines. I used to se
 - BOM (SX64): DB25 - male connector with cover removed
 - Instructions (128/128D): Print Keyboard128 case. Solder DB25 male connector to "DB25-M(8)" side and DB25 female connector to "DB25-M(X)/F(8)" side. Solder DPDT switch. 
 - Instructions (SX64): Print KeyboardSX case. Solder "SX64 enable" blob. Solder DB25 male connector (w/ cover removed) to "DB25-M(X)/F(8)" side. Attach to case with super glue, with 13-pin side closer to handle, 12-pin side away from handle.
- 
+
+## GenAssister for (Sega Genesis joystick switcher for Commodore 64/128)
+![ga](https://github.com/evietron/BackBit-OpenSource/assets/35610816/2c5e1fe5-c3de-4ae9-a238-c15191f7c96a)
+- BOM: 1x SMT ATF1502ASL-25AU44, 1x APEM MHS233 switch, 2x Amphenol LD09S13A4GX00LF DB9 port, 1x Amphenol LD09P13A4GX00LF DB9 port, 1x NE555 SOIC-8, 1x 10Kx7 resistor network, 1x 3mm Red LED, 1x 3mm Yellow LED, 1x 220R resistor, 1x 330R resistor, 1x STX-3000 TRS jack, 1x 100mA polyfuse, 1x 471 SMT capacitor, 7x 100nf SMT Capacitor, 2x 10K SMT capacitor, 1x 15K SMT capacitor.
+- Installation: Program CPLD w/ ATDH1150USB programmer.
+
 ## IBM PCjr (512KB sidecar expansion)
 ![pcjr](https://github.com/evietron/BackBit-OpenSource/assets/35610816/a76c975b-dd6d-4008-a9ed-c999b2c15e44)
 - Details: Adds 512KB, expanding total system memory to 640KB (if you already have 128KB internally).
@@ -50,4 +55,4 @@ These are some hardware devices that I use for my vintage machines. I used to se
 - Details: Fills in the system's memory map to get the maximum non-bankswitched RAM expansion. No pass-through port in this design. Need to add JTAG header if you don't have a programmer with a socket.
 - BOM: 1x SMT CY62256NLL-70SNX (SOP-28), 1x SMT ATF1502ASL-25AU44, 5x SMT 0.1uF bypass capacitors, 44P 2.54mm edge connector.
 - Installation: Program CPLD w/ ATDH1150USB programmer. Plug sidecar into side of machine.
-- Case: https://www.printables.com/model/301498
+- Case: https://www.printables.com/model/301498 
