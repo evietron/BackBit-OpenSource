@@ -1,0 +1,178 @@
+Name      GenAssister;
+Partno    V2;
+Date      1/2/2023;
+Rev       01;
+Designer  Evie Salomon;
+Company   BackBit;
+Assembly  None;
+Location  None;
+Device    f1502isptqfp44;
+PROPERTY ATMEL {pin_keep OFF} ; /* Disables pin-keeper circuits */
+PROPERTY ATMEL {preassign = keep};
+
+PIN 2 = out_joy2f3;
+PIN 3 = out_joy2f2;
+PIN 5 = out_joy2r;
+PIN 6 = out_joy2l;
+PIN 8 = out_joy2d;
+PIN 10 = out_joy2f;
+PIN 11 = out_joy2u;
+PIN 12 = out_joy1f3;
+PIN 13 = out_joy1f2;
+PIN 14 = out_joy1r;
+PIN 15 = !in_sw2;
+PIN 18 = in_sw1;
+PIN 19 = out_joy1l;
+PIN 20 = out_joy1d;
+PIN 21 = out_joy1f;
+PIN 22 = out_joy1u;
+PIN 23 = !in_up;
+PIN 25 = !in_ab;
+PIN 27 = !in_down;
+PIN 28 = out_select;
+PIN 30 = !in_left;
+PIN 31 = !in_right;
+PIN 33 = !in_startc;
+PIN 34 = out_sig;
+PIN 35 = out_menu;
+PIN 37 = clk;
+PIN 42 = in_led;
+PIN 43 = out_act1;
+PIN 44 = out_act2;
+
+PROPERTY ATMEL {open_collector = out_joy1u,out_joy1d,out_joy1l,out_joy1r,out_joy1f,out_joy2u,out_joy2d,out_joy2l,out_joy2r,out_joy2f};
+
+PINNODE = do_up;
+PINNODE = do_down;
+PINNODE = do_left;
+PINNODE = do_right;
+PINNODE = do_a;
+PINNODE = do_b;
+PINNODE = do_c;
+PINNODE = do_x;
+PINNODE = do_y;
+PINNODE = do_z;
+PINNODE = do_start;
+PINNODE = do_start2;
+PINNODE = do_start3;
+PINNODE = do_mode;
+PINNODE = do_joy1;
+PINNODE = do_joy2;
+PINNODE = is_six;
+PINNODE = was_six;
+PINNODE = turbo5;
+PINNODE = turbo4;
+PINNODE = turbo3;
+PINNODE = turbo2;
+PINNODE = do_turbo;
+PINNODE = toggle_joy;
+PINNODE = toggle_auto;
+
+turbo5.t = 'b'1;
+turbo5.ck = is_six;
+
+turbo4.t = 'b'1;
+turbo4.ck = turbo5;
+
+turbo3.t = 'b'1;
+turbo3.ck = turbo4;
+
+turbo2.t = 'b'1;
+turbo2.ck = turbo3;
+
+do_turbo.t = 'b'1;
+do_turbo.ck = turbo2;
+
+out_joy1u = 'b'0;
+out_joy1d = 'b'0;
+out_joy1l = 'b'0;
+out_joy1r = 'b'0;
+out_joy1f = 'b'0;
+out_joy2u = 'b'0;
+out_joy2d = 'b'0;
+out_joy2l = 'b'0;
+out_joy2r = 'b'0;
+out_joy2f = 'b'0;
+
+is_six.d = !was_six & in_up & in_down & in_left & in_right;
+is_six.ck = !clk & !out_select;
+
+was_six.d = is_six;
+was_six.ck = !clk & out_select;
+
+do_up.d = in_up & !in_down;
+do_up.ck = !clk & out_select & !is_six;
+
+do_down.d = in_down & !in_up;
+do_down.ck = !clk & out_select & !is_six;
+
+do_left.d = in_left & !in_right;
+do_left.ck = !clk & out_select & !is_six;
+
+do_right.d = in_right & !in_left;
+do_right.ck = !clk & out_select & !is_six;
+
+do_a.d = in_ab;
+do_a.ck = !clk & !out_select;
+
+do_b.d = in_ab;
+do_b.ck = !clk & out_select;
+
+do_c.d = in_startc;
+do_c.ck = !clk & out_select;
+
+do_x.d = in_left & !in_right & !in_up;
+do_x.ck = !clk & out_select & is_six;
+
+do_y.d = in_down & !in_right;
+do_y.ck = !clk & out_select & is_six;
+
+do_z.d = in_up & !in_right & !in_left;
+do_z.ck = !clk & out_select & is_six;
+
+do_start.d = in_startc;
+do_start.ck = !clk & !out_select;
+
+do_start2.d = do_start & in_startc;
+do_start2.ck = !clk & !out_select;
+
+do_start3.d = do_start2 & in_startc;
+do_start3.ck = !clk & !out_select;
+
+do_mode.d = in_right & !in_left & !in_down & !in_up;
+do_mode.ck = !clk & out_select & is_six;
+
+toggle_joy.t = 'b'1;
+toggle_joy.ck = do_start3;
+
+toggle_auto.d = do_y;
+toggle_auto.ck = do_x;
+
+do_joy1 = in_sw1 & (!in_sw2 # toggle_joy);
+do_joy2 = in_sw2 & (!in_sw1 # !toggle_joy);
+
+out_joy1u.oe = do_joy1 & (do_up # do_c);
+out_joy1d.oe = do_joy1 & do_down;
+out_joy1l.oe = do_joy1 & do_left;
+out_joy1r.oe = do_joy1 & do_right;
+out_joy1f.oe = do_joy1 & (do_b # ((do_y $ toggle_auto) & do_turbo)) # do_joy2 & in_sw1 & do_a;
+out_joy1f2 = do_joy1 & do_z;
+out_joy1f3 = 'b'0;
+
+out_joy2u.oe = do_joy2 & (do_up # do_c);
+out_joy2d.oe = do_joy2 & do_down;
+out_joy2l.oe = do_joy2 & do_left;
+out_joy2r.oe = do_joy2 & do_right;
+out_joy2f.oe = do_joy2 & (do_b # ((do_y $ toggle_auto) & do_turbo)) # do_joy1 & in_sw2 & do_a;
+out_joy2f2 = do_joy2 & do_z;
+out_joy2f3 = 'b'0;
+
+out_select.d = !in_sw1 # !in_sw2 # !out_select;
+out_select.ck = clk;
+
+out_sig = 'b'1;
+out_act1 = do_joy2;
+out_act2 = in_led # toggle_auto;
+
+out_menu = 'b'0;
+out_menu.oe = do_mode;
