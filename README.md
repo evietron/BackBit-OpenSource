@@ -33,6 +33,16 @@ These are some hardware devices that I use for my vintage machines. I used to se
 [![korg](https://github.com/evietron/BackBit-OpenSource/assets/35610816/7c0aca98-5733-446d-937b-ad7a9d408a7a)](https://github.com/evietron/BackBit-OpenSource/tree/main/Korg-01W-LCD-Fix)
 - Details: Adapter to fix the contrast when replacing the Korg 01/W LCD with a modern LED replacement
 
+## Plaster 64 (PLA replacement for Commodore 64)
+![20210915_034108](https://github.com/evietron/BackBit-OpenSource/assets/35610816/9585fa23-6bb2-4884-82d1-0ce82a5b6800)
+- Details: Replaces MOS 906114 with exact equations used in original device
+- CAS delay: Improves compatibility on some systems.
+- KERNAL Mode: Switch allows BackBit cartridge (any maybe others) to replace KERNAL ROM.
+- Private Eyes Mode: Switch sets bus high to facilitate in-circuit testing.
+- BOM: SMT ATF1502ASL-25AU44, 3x 2.54mm DIP switch, 28x header pins, optional 28P socket, and parts assembled on bottom of PCB listed in parts folder.
+- Instructions: PCB requires SMT assembly.
+- Installation: Program CPLD w/ ATDH1150USB programmer.
+
 ## PLAster 128 (PLA replacement for Commodore 128)
 [![plaster128](https://github.com/evietron/BackBit-OpenSource/assets/35610816/7ebf0da7-4511-4e17-847f-dc302badc5b8)](https://github.com/evietron/BackBit-OpenSource/tree/main/PLAster128)
 - Details: Replaces MOS 8721 with exact equations used in original device
