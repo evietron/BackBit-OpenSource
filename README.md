@@ -34,8 +34,9 @@ These are some hardware devices that I use for my vintage machines. I used to se
 - Details: Adapter to fix the contrast when replacing the Korg 01/W LCD with a modern LED replacement
 
 ## Plaster 64 (PLA replacement for Commodore 64)
-![20210915_034108](https://github.com/evietron/BackBit-OpenSource/assets/35610816/9585fa23-6bb2-4884-82d1-0ce82a5b6800)
-- Details: Replaces MOS 906114 with exact equations used in original device
+[![plaster64](https://github.com/evietron/BackBit-OpenSource/assets/35610816/cff2a277-761c-4e67-9c2d-24f7199e35f5)](https://github.com/evietron/BackBit-OpenSource/tree/main/PLAster64)
+- Details: Replaces MOS 906114 with exact
+ equations used in original device
 - CAS delay: Improves compatibility on some systems.
 - KERNAL Mode: Switch allows BackBit cartridge (any maybe others) to replace KERNAL ROM.
 - Private Eyes Mode: Switch sets bus high to facilitate in-circuit testing.
