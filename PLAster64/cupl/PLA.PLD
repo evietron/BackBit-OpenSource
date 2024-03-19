@@ -1,0 +1,80 @@
+Name      PLA;
+Partno    906114-01;
+Date      01/01/2023;
+Rev       01;
+Designer  Evie Salomon;
+Company   BackBit;
+Assembly  None;
+Location  None;
+Device    f1502isptqfp44;
+
+PIN 8 = in_cas;
+PIN 6 = in_loram;
+PIN 5 = in_hiram;
+PIN 3 = in_charen;
+PIN 2 = in_va14;
+PIN 44 = in_a15;
+PIN 43 = in_a14;
+PIN 42 = in_a13;
+PIN 35 = in_a12;
+PIN 34 = in_ba;
+PIN 33 = in_aec;
+PIN 31 = in_rw;
+PIN 30 = in_exrom;
+PIN 28 = in_game;
+PIN 27 = in_va13;
+PIN 25 = in_va12;
+
+PIN 38 = !in_ce;
+
+PIN 20 = in_eyes;
+PIN 19 = !in_kernal;
+PIN 18 = !in_delay;
+PIN 15 = out_casram;
+PINNODE = tmp_casram;
+PIN 23 = out_basic;
+PIN 22 = out_kernal;
+PIN 21 = out_charrom;
+PIN 13 = out_grw;
+PIN 12 = out_io;
+PIN 11 = out_roml;
+PIN 10 = out_romh;
+
+FIELD cmem = [in_a15,in_a14,in_a13,in_a12];
+FIELD vmem = [in_va14,in_va13,in_va12];
+
+ultimax = in_exrom & !in_game;
+
+basic = !in_aec & in_loram & in_hiram & cmem:[a000..bfff] & in_rw & in_game;
+kernal = !in_aec & in_hiram & cmem:[e000..ffff] & in_rw & !ultimax;
+charrom = !in_aec & !in_charen & cmem:[d000..dfff] & in_rw & ((in_hiram & !ultimax) # (in_loram & in_game)) # in_aec & !ultimax & vmem:[5000..5fff];
+io = !in_aec & !(in_rw & !in_ba) & cmem:[d000..dfff] & (ultimax # (in_charen & (in_hiram # in_loram)));
+roml = !in_aec & cmem:[8000..9fff] & (in_loram & in_hiram & in_rw & !in_exrom # ultimax);
+romh = !in_aec & (cmem:[a000..bfff] & in_hiram & in_rw & !in_exrom & !in_game # cmem:[e000..ffff] & ultimax) # in_aec & ultimax & (vmem:[3000..3fff] # vmem:[7000..7fff]);
+grw = !in_aec & !in_rw & !in_cas & cmem:[d000..dfff];
+casram = basic # kernal # charrom # io # roml # romh # ultimax & (cmem:[1000..7fff] # cmem:[a000..cfff]) # in_cas;
+tmp_casram = casram;
+
+out_casram = in_delay & tmp_casram.io # !in_delay & casram;
+out_casram.oe = in_ce & !in_eyes;
+
+out_basic = !basic;
+out_basic.oe = in_ce & !in_eyes;
+
+out_kernal = !(kernal & !in_kernal);
+out_kernal.oe = in_ce & !in_eyes; /* switch disables KERNAL ROM */
+
+out_charrom = !charrom;
+out_charrom.oe = in_ce & !in_eyes;
+
+out_grw = !grw;
+out_grw.oe = in_ce & !in_eyes;
+
+out_io = !io;
+out_io.oe = in_ce & !in_eyes;
+
+out_roml = !roml;
+out_roml.oe = in_ce & !in_eyes;
+
+out_romh = !(romh # (in_kernal & kernal));
+out_romh.oe = in_ce & !in_eyes; /* switch routes KERNAL to cartridge */

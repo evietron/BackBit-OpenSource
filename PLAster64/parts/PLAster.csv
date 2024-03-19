@@ -1,0 +1,5 @@
+Comment,Designator,Footprint,LCSC
+"100nF","C1,C2,C3,C4","Capacitor_SMD:C_0402_1005Metric","C1525"
+"D_Small","D1,D2,D3,D4,D5,D6,D7,D8","Diode_SMD:D_SOD-323","C2128"
+"10K","R1,R2,R3","Resistor_SMD:R_0402_1005Metric","C25744"
+"3.3K","R4,R5,R6,R7,R8,R9,R10,R11","Resistor_SMD:R_0402_1005Metric","C25890"
