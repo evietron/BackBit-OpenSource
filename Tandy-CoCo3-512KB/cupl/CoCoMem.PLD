@@ -72,6 +72,6 @@ enable_write = !(in_we0 & in_we1 # in_cas);
 out_we = !(enable_write & !in_rc);
 out_rc = enable_write;
 out_ce = in_ras;
-out_oe = in_cas;
+out_oe = !(in_we0 & in_we1);
 out_ub = !in_we0;
 out_lb = !in_we1;
