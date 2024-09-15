@@ -69,6 +69,7 @@ These are some hardware devices that I use for my vintage machines. I used to se
 - Details: Expands base model's 128KB to 512KB. Timing window is very narrow. RC delay accomodates SRAM to work in place of DRAM.
 - BOM: 1x SMT IS61C25616AS-25TLI, 1x SMT ATF1502ASL-25AU44, square header pins.
 - Installation: Program CPLD w/ ATDH1150USB programmer. Remove existing RAM chips, plug memory board into expansion headers. Optionally remove ceramic caps C65 and C66.
+- Note: I made a late change to the CUPL file to adjust the equations, which could fix some bus contention. I would recommend to test both the previous and current CUPL files to be certain.
 
 ## Texas Instruments TI-99/4A (32KB sidecar expansion)
 [![ti99](https://github.com/evietron/BackBit-OpenSource/assets/35610816/79d055d7-3faf-4f9b-b9ff-c5828c904c9f)](https://github.com/evietron/BackBit-OpenSource/tree/main/TexasInstruments-TI994A-32KB)
