@@ -10,7 +10,7 @@ These are some hardware devices that I use for my vintage machines. I used to se
 - Installation: Mount sockets on main board, route bodge wires. Plug memory board into sockets.
 
 ## BBC Micro B: Ashtray (for 28-pin ROM)
-![bbc](https://github.com/user-attachments/assets/c802309d-c48d-4f61-8c44-8d4ffe456ce5)
+[![bbc](https://github.com/user-attachments/assets/c802309d-c48d-4f61-8c44-8d4ffe456ce5)](https://github.com/evietron/BackBit-OpenSource/tree/main/BBC-Micro-B-Ashtray)
 - Details: Allows plugging in 28-pin ROMs from the front of your BBC Micro without opening it up (after installed)
 - Warning: You might have to cut some capacitors that get in the way of the IDC socket connector.
 - Options: You can use a 26-pin or 30-pin IDC cable. If you only need support for 16K ROMs, you can use 26-pin. For 32K ROMs, you will need 30pin.
